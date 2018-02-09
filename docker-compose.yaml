@@ -12,6 +12,7 @@ services:
       - "8007:8007"
     volumes:
       - $HOME/.ssb:/root/.ssb
-    container_name: easy-ssb-pub
-    mem_limit: 450M
+      - /srv/easy-ssb-pub:/usr/src/app
+    container_name: ssb
+    mem_limit: 2048M
     restart: unless-stopped
