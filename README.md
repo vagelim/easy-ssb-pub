@@ -6,13 +6,15 @@
 
 [Secure Scuttlebutt](https://scuttlebutt.nz) (SSB) is an impressive peer-to-peer network that can be used for metadata, identity, and particularly, messaging. SSB is an ideal protocol for a social network. There is already a social network on SSB, called [Patchwork](https://github.com/ssbc/patchwork).
 
-However, to join the wider SSB network, you must get a dedicated invitation from a "Pub" server. Also, hosting a Pub server is not the easiest task. In order to improve adoption of SSB, this project makes it easy to deploy an SSB Pub. Once the Pub is running, it has a light frontend page where anyone can get freely request a fresh invitation.
+However, to join the wider SSB network, you must get a dedicated invitation from a "Pub" server. Also, hosting a Pub server is not the easiest task. In order to improve adoption of SSB, this project makes it easy to deploy an SSB Pub. Once the Pub is running, it has a light frontend page where anyone can freely request a fresh invitation.
 
 ## Visit one of these
 
 Check the [Pub Registry](https://github.com/ssbc/scuttlebot/wiki/Pub-Servers).
 
 ## How to deploy
+
+**⚠️ Note! This project is not actively maintained anymore by @staltz, because: (1) I'm focusing on building [MMMMM](https://github.com/staltz/mmmmm-mobile/) and have no time, (2) this project should be split up as multiple sbot plugins, that would be a better architecture that allow easier evolution of each part, and easier customization. Feel free to fork! 🍴**
 
 You will need a server that supports a TCP sockets on ports 80, 8008 and 8007. This means [Heroku](https://heroku.com/) or [Zeit Now](https://zeit.co/now) will *not* work. Recommended services for servers-on-demand: [Digital Ocean Docker Droplet](https://www.digitalocean.com/products/one-click-apps/docker/), [UpCloud](https://upcloud.com/), [Amazon LightSail](https://amazonlightsail.com/), [Vultr](https://vultr.com/), [Linode](https://www.linode.com), etc.
 
@@ -43,8 +45,9 @@ After the container has been created, stop/start/restart the server using:
 4. Restart the shell
 5. `nvm install v6.9.1`
 6. `git clone https://github.com/staltz/easy-ssb-pub.git`
-7. `npm install`
-8. `HOST=publicurltoyourserv.er npm start`
+7. `cd easy-ssb-pub`
+8. `npm install`
+9. `HOST=publicurltoyourserv.er npm start`
 
 ## How to debug
 
